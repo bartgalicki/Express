@@ -1,5 +1,14 @@
 const express = require("express");
+const mongoose = require('mongoose');
 const app = express();
+
+const mongodb =
+	'mongodb+srv://byte210:hypomnemata1@cluster0.yfoz7.mongodb.net/?retryWrites=true&w=majority';
+
+mongoose
+	.connect(mongodb)
+	.then(() => console.log('connected'))
+	.catch((err) => console.log('an error occured ', err));
 
 app.set("view engine", "ejs");
 
