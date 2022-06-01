@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require('mongoose');
+const mongodbPass = require('.env');
 const Item = require('./models/items');
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
-const mongodb =
-	'mongodb+srv://byte210:hypomnemata1@cluster0.yfoz7.mongodb.net/?retryWrites=true&w=majority';
+const mongodb = mongodbPass;
 
 mongoose
 	.connect(mongodb)
