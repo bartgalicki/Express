@@ -1,2 +1,4 @@
 /node_modules
-.env
+*envVar.js
+./envVar.js
+envVar.js

@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require('mongoose');
-const mongodbPass = require('.env');
 const Item = require('./models/items');
+const MONGODB_PASS = require('./envVar');
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 
-const mongodb = mongodbPass;
+const mongodb = MONGODB_PASS;
 
 mongoose
 	.connect(mongodb)
